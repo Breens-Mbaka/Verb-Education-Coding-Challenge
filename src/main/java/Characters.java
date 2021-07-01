@@ -5,6 +5,7 @@ public class Characters {
 
     private static void removeDuplicateCharacters() {
         String letters = "abbaca";
-        String[] arrayOfLetters = letters.split("");
+        String[] arrayOfCharacters = letters.split("");
+        StringBuilder uniqueCharacters = new StringBuilder();
     }
 }
