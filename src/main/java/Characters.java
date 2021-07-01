@@ -7,5 +7,9 @@ public class Characters {
         String letters = "abbaca";
         String[] arrayOfCharacters = letters.split("");
         StringBuilder uniqueCharacters = new StringBuilder();
+
+        for(int index = 0; index < arrayOfCharacters.length; index++) {
+
+        }
     }
 }
