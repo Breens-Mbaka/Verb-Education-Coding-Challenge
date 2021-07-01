@@ -1,5 +1,10 @@
 public class Characters {
     public static void main(String args[]) {
-        System.out.println("It works");
+        removeDuplicateCharacters();
+    }
+
+    private static void removeDuplicateCharacters() {
+        String letters = "abbaca";
+        String[] arrayOfLetters = letters.split("");
     }
 }
