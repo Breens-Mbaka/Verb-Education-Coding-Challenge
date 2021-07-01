@@ -8,8 +8,10 @@ public class Characters {
         String[] arrayOfCharacters = letters.split("");
         StringBuilder uniqueCharacters = new StringBuilder();
 
-        for(int index = 0; index < arrayOfCharacters.length; index++) {
+        for (int i = 0; i < arrayOfCharacters.length; i++) {
+            for (int j = 1; j < arrayOfCharacters.length; j++) {
 
+            }
         }
     }
 }
