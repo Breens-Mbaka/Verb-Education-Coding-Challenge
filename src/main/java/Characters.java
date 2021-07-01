@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Characters {
     public static void main(String args[]) {
         removeDuplicateCharacters();
@@ -5,14 +8,15 @@ public class Characters {
 
     private static void removeDuplicateCharacters() {
         String letters = "abbaca";
-        String[] arrayOfCharacters = letters.split("");
+        List<String> arrayOfCharacters = Arrays.asList(letters.split(""));
         StringBuilder uniqueCharacters = new StringBuilder();
 
-        for (int i = 0; i < arrayOfCharacters.length; i++) {
-            for (int j = 1; j < arrayOfCharacters.length; j++) {
+        for (int i = 0; i < arrayOfCharacters.size(); i++) {
+            for (int j = 1; j < arrayOfCharacters.size(); j++) {
 
-                String firstLetter = arrayOfCharacters[i];
-                String adjacentLetter = arrayOfCharacters[j];
+                String firstLetter = arrayOfCharacters.get(i);
+                String adjacentLetter = arrayOfCharacters.get(j);
+
 
             }
         }
