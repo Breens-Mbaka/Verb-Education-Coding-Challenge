@@ -16,9 +16,12 @@ public class Characters {
 
                 String firstLetter = arrayOfCharacters.get(i);
                 String adjacentLetter = arrayOfCharacters.get(j);
-
-
+                if (firstLetter == adjacentLetter) {
+                    arrayOfCharacters.remove(arrayOfCharacters.get(i));
+                    arrayOfCharacters.remove(arrayOfCharacters.get(j));
+                }
             }
         }
+
     }
 }
