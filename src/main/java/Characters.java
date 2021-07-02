@@ -1,27 +1,20 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class Characters {
     public static void main(String args[]) {
-        removeDuplicateCharacters();
+        removeAdjacentCharacters();
     }
 
-    private static void removeDuplicateCharacters() {
-        String letters = "abbaca";
-        List<String> arrayOfCharacters = Arrays.asList(letters.split(""));
+    private static void removeAdjacentCharacters() {
+        String word = "abbaca";
         StringBuilder uniqueCharacters = new StringBuilder();
 
-        for (int i = 0; i < arrayOfCharacters.size(); i++) {
-            for (int j = 1; j < arrayOfCharacters.size(); j++) {
-
-                String firstLetter = arrayOfCharacters.get(i);
-                String adjacentLetter = arrayOfCharacters.get(j);
-                if (firstLetter == adjacentLetter) {
-                    arrayOfCharacters.remove(arrayOfCharacters.get(i));
-                    arrayOfCharacters.remove(arrayOfCharacters.get(j));
-                }
+        for(char character: word.toCharArray()) {
+            int size = uniqueCharacters.length();
+            if(size > 0 && uniqueCharacters.charAt(size - 1) == character){
+                uniqueCharacters.deleteCharAt(size - 1);
+            } else {
+                uniqueCharacters.append(character);
             }
         }
-
+        System.out.println(uniqueCharacters);
     }
 }
