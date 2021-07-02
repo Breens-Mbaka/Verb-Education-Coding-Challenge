@@ -4,11 +4,13 @@ public class Characters {
     }
 
     private static void removeAdjacentCharacters() {
-        String word = "abbaca";
-        StringBuilder uniqueCharacters = new StringBuilder();
+        String word = "xyaaya";//input string
+        StringBuilder uniqueCharacters = new StringBuilder();//output string
 
         for(char character: word.toCharArray()) {
             int size = uniqueCharacters.length();
+            //If the last occurs character equals the current character remove,
+            // otherwise add it to our output
             if(size > 0 && uniqueCharacters.charAt(size - 1) == character){
                 uniqueCharacters.deleteCharAt(size - 1);
             } else {
